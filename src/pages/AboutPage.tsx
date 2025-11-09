@@ -1,4 +1,5 @@
 import { Award, Users, Target, Leaf, TreePine, Shield, Sparkles } from 'lucide-react';
+import { Link } from 'react-router-dom'; // Importar Link
 
 export default function AboutPage() {
   return (
@@ -36,10 +37,9 @@ export default function AboutPage() {
 
             <div className="grid grid-cols-2 gap-6">
               {[
-                { number: '10+', label: 'Years Experience' },
+                { number: '5+', label: 'Years Experience' },
                 { number: '1000+', label: 'Trees Cared For' },
                 { number: '100%', label: 'Client Satisfaction' },
-                { number: '24/7', label: 'Emergency Service' },
               ].map((stat, i) => (
                 <div
                   key={i}
@@ -156,10 +156,12 @@ export default function AboutPage() {
           <p className="text-xl text-green-100 mb-8 max-w-2xl mx-auto">
             Contact us today for reliable tree care and landscaping services you can trust
           </p>
-          <button className="bg-white text-green-700 px-10 py-4 rounded-xl font-bold text-lg hover:bg-green-50 transition-all inline-flex items-center space-x-3 hover:scale-105 shadow-2xl">
-            <span>Get Free Estimate</span>
-            <span>→</span>
-          </button>
+          <Link to="/contact">
+            <button className="bg-white text-green-700 px-10 py-4 rounded-xl font-bold text-lg hover:bg-green-50 transition-all inline-flex items-center space-x-3 hover:scale-105 shadow-2xl">
+              <span>Get Free Estimate</span>
+              <span>→</span>
+            </button>
+          </Link>
         </div>
       </section>
     </div>

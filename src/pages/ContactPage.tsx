@@ -79,7 +79,7 @@ export default function ContactPage() {
                       <h3 className="text-xl font-bold text-gray-900 mb-2">
                         Email
                       </h3>
-                      <p className="text-lg text-gray-600">vargastree@email.com</p>
+                      <p className="text-lg text-gray-600">vargastreelandscape@gmail.com</p>
                       <p className="text-sm text-gray-500">Response within 24 hours</p>
                     </div>
                   </div>
@@ -103,10 +103,10 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h3 className="text-xl font-bold text-gray-900 mb-2">
-                        Hours
+                        Office Hours
                       </h3>
-                      <p className="text-lg text-gray-600">Mon - Fri: 8AM - 6PM</p>
-                      <p className="text-sm text-gray-500">Sat: 10AM - 4PM | Sun: Closed</p>
+                      <p className="text-lg text-gray-600">Mon - Fri: 7AM - 3PM</p>
+                      <p className="text-sm text-gray-500">Sat: 8AM - 2PM | Sun: Closed</p>
                     </div>
                   </div>
                 </div>
@@ -114,19 +114,50 @@ export default function ContactPage() {
 
               {/* Mapa */}
               <div className="mt-12">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">Our Location</h3>
-                <div className="rounded-2xl overflow-hidden border-2 border-gray-200 shadow-lg">
-                  <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3223.396027284843!2d-86.78202772427066!3d36.118766472446!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8864660e65d2f1c5%3A0x2c6c6e6d6c6e6d6e!2s330%20Stonecrest%20Way%2C%20Nashville%2C%20TN%2037209!5e0!3m2!1sen!2sus!4v1234567890"
-                    width="100%"
-                    height="300"
-                    style={{ border: 0 }}
-                    allowFullScreen
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                    title="Vargas Tree Landscaping Services Location"
-                    className="w-full"
-                  ></iframe>
+                <h3 className="text-2xl font-bold text-gray-900 mb-6">Service Areas</h3>
+                <div className="rounded-2xl overflow-hidden border-2 border-gray-200 shadow-lg bg-white p-6">
+                  <div className="grid md:grid-cols-2 gap-6 text-sm">
+                    <div>
+                      <h4 className="font-bold text-green-700 mb-3">North of Nashville</h4>
+                      <ul className="text-gray-600 space-y-1">
+                        <li>• Springfield</li>
+                        <li>• White House</li>
+                        <li>• Portland</li>
+                        <li>• Gallatin</li>
+                        <li>• Hendersonville</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-green-700 mb-3">East of Nashville</h4>
+                      <ul className="text-gray-600 space-y-1">
+                        <li>• Lebanon</li>
+                        <li>• Mount Juliet</li>
+                        <li>• Hartsville</li>
+                        <li>• Carthage</li>
+                        <li>• Watertown</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-green-700 mb-3">South of Nashville</h4>
+                      <ul className="text-gray-600 space-y-1">
+                        <li>• Franklin</li>
+                        <li>• Brentwood</li>
+                        <li>• Murfreesboro</li>
+                        <li>• Spring Hill</li>
+                        <li>• Columbia</li>
+                        <li>• Shelbyville</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-green-700 mb-3">West of Nashville</h4>
+                      <ul className="text-gray-600 space-y-1">
+                        <li>• Dickson</li>
+                        <li>• Fairview</li>
+                        <li>• Kingston Springs</li>
+                        <li>• Ashland City</li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
               </div>
 

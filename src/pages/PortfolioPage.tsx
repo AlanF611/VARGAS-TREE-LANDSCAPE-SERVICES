@@ -9,10 +9,12 @@ const projects = [
     location: 'Nashville, TN',
     description: 'Complete softscape and hardscape transformation',
     images: [
-      '/img/1.jpg',
-      '/img/1.2.jpg',
+      '/img/1.6.jpg',
+      '/img/1.7.jpg',
       '/img/1.3.jpg',
       '/img/1.5.jpg',
+      '/img/1.jpg',
+      '/img/1.2.jpg',
     ],
     services: ['Softscape', 'Hardscape', 'Garden Construction']
   },
@@ -42,10 +44,24 @@ const projects = [
     ],
     services: ['Tree Trimming', 'Health Assessment', 'Storm Prevention']
   },
+   {
+    id: 4,
+    title: 'SOFTSCAPE',
+    category: 'SOFTSCAPE', 
+    location: 'Nashville, TN',
+    description: 'SOFTSCAPE',
+    images: [
+      '/img/4.jpg',
+      '/img/4.1.jpg',
+      '/img/4.2.jpg',
+      '/img/4.3.jpg',
+    ],
+    services: ['Size Control Pruning', 'Formal Garden Pruning', 'Formal Garden Pruning']
+  },
   
 ];
 
-const categories = ['All', 'LANDSCAPE DESIGN', 'TREE SERVICES'];
+const categories = ['All', 'LANDSCAPE DESIGN', 'TREE SERVICES','SOFTSCAPE '];
 
 export default function PortfolioPage() {
   const [filter, setFilter] = useState('All');
