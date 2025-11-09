@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Phone, Mail, MapPin, Send, Clock, MessageSquare, Instagram, Facebook, Star } from 'lucide-react';
+import { Phone, Mail, MapPin, Send, Clock, MessageSquare, Instagram, Facebook, Star, Home } from 'lucide-react';
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -164,7 +164,7 @@ export default function ContactPage() {
               {/* Redes Sociales */}
               <div className="mt-8">
                 <h3 className="text-2xl font-bold text-gray-900 mb-6">Follow Us</h3>
-                <div className="flex gap-4">
+                <div className="flex gap-4 flex-wrap">
                   <a
                     href="https://www.instagram.com/vargastreelandscaping?igsh=em5tbXQxYnYwdzdm&utm_source=qr"
                     target="_blank"
@@ -193,6 +193,16 @@ export default function ContactPage() {
                   >
                     <Star className="w-5 h-5" />
                     <span>Yelp</span>
+                  </a>
+
+                  <a
+                    href="https://nextdoor.com/page-admin/ads-management/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-3 px-6 py-3 bg-green-600 text-white rounded-xl font-semibold hover:shadow-lg transition-all hover:scale-105"
+                  >
+                    <Home className="w-5 h-5" />
+                    <span>Nextdoor</span>
                   </a>
                 </div>
               </div>
