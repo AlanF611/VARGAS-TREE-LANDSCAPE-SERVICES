@@ -44,7 +44,7 @@ const projects = [
     ],
     services: ['Tree Trimming', 'Health Assessment', 'Storm Prevention']
   },
-   {
+  {
     id: 4,
     title: 'SOFTSCAPE',
     category: 'SOFTSCAPE', 
@@ -58,10 +58,9 @@ const projects = [
     ],
     services: ['Size Control Pruning', 'Formal Garden Pruning', 'Formal Garden Pruning']
   },
-  
 ];
 
-const categories = ['All', 'LANDSCAPE DESIGN', 'TREE SERVICES','SOFTSCAPE '];
+const categories = ['All', 'LANDSCAPE DESIGN', 'TREE SERVICES', 'SOFTSCAPE']; // Corregido: sin espacio
 
 export default function PortfolioPage() {
   const [filter, setFilter] = useState('All');
