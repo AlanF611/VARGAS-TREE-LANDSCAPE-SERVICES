@@ -49,7 +49,7 @@ const projects = [
     title: 'SOFTSCAPE',
     category: 'SOFTSCAPE', 
     location: 'Nashville, TN',
-    description: 'SOFTSCAPE',
+    description: 'Complete softscape transformation',
     images: [
       '/img/4.jpg',
       '/img/4.1.jpg',
