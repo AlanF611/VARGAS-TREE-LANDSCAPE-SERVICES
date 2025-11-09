@@ -1,34 +1,43 @@
 import { useState } from 'react';
-import { Image, MapPin, ArrowRight } from 'lucide-react';
+import { Image } from 'lucide-react';
 
 const projects = [
   {
     title: 'Modern Zen Garden',
-    location: 'Nashville, TN',
     category: 'Residential',
     description: 'A peaceful retreat featuring minimalist design and natural stone elements',
-    image: '/img/zen-garden.jpg'
   },
   {
     title: 'Tropical Paradise',
-    location: 'Brenwood, TN',
-    category: 'Residential', 
+    category: 'Residential',
     description: 'Lush tropical landscaping with exotic plants and water features',
-    image: '/img/tropical-paradise.jpg'
   },
   {
-    title: 'Hola',
-    location: 'Downtown Nashville',
+    title: 'Corporate Landscape',
     category: 'Commercial',
-    description: 'Professional outdoor space for corporate headquarters',
-    image: '/img/corporate-plaza.jpg'
+    description: 'Professional outdoor space for a Fortune 500 company headquarters',
+  },
+  {
+    title: 'English Garden',
+    category: 'Residential',
+    description: 'Classic English garden with perennial borders and formal pathways',
+  },
+  {
+    title: 'Rooftop Oasis',
+    category: 'Commercial',
+    description: 'Urban rooftop garden with sustainable irrigation and native plants',
+  },
+  {
+    title: 'Mediterranean Estate',
+    category: 'Residential',
+    description: 'Sun-soaked Mediterranean landscape with terracotta and olive trees',
   },
 ];
 
 export default function Portfolio() {
   const [filter, setFilter] = useState('All');
 
-  const categories = ['All', 'Residential', 'Commercial'];
+  const categories = ['All', 'Residential', 'Commercial','Softscape '];
 
   const filteredProjects =
     filter === 'All'
@@ -69,12 +78,8 @@ export default function Portfolio() {
               key={index}
               className="group bg-gray-50 rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
             >
-              <div className="aspect-[4/3] bg-gradient-to-br from-green-400 to-green-600 relative overflow-hidden">
-                <img 
-                  src={project.image} 
-                  alt={project.title}
-                  className="w-full h-full object-cover"
-                />
+              <div className="aspect-[4/3] bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center relative overflow-hidden">
+                <Image className="w-16 h-16 text-white/50" />
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all"></div>
               </div>
               <div className="p-6">
@@ -84,15 +89,7 @@ export default function Portfolio() {
                 <h3 className="text-xl font-bold text-gray-900 mb-2">
                   {project.title}
                 </h3>
-                <div className="flex items-center text-gray-600 mb-2">
-                  <MapPin className="w-4 h-4 mr-1" />
-                  <span className="text-sm">{project.location}</span>
-                </div>
-                <p className="text-gray-600 mb-4">{project.description}</p>
-                <button className="flex items-center space-x-2 text-green-600 font-semibold hover:text-green-700 transition-all">
-                  <span>View Project</span>
-                  <ArrowRight className="w-4 h-4" />
-                </button>
+                <p className="text-gray-600">{project.description}</p>
               </div>
             </div>
           ))}

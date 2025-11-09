@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { TreePine, Facebook, Instagram, Star, MapPin, Phone, Mail } from 'lucide-react';
+import { TreePine, Facebook, Instagram, Star, MapPin, Phone, Mail, Home } from 'lucide-react';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -46,6 +46,15 @@ export default function Footer() {
               >
                 <Star className="w-6 h-6" />
               </a>
+              <a
+                href="https://nextdoor.com/page-admin/ads-management/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-12 h-12 bg-gray-800 hover:bg-green-600 rounded-full flex items-center justify-center transition-all transform hover:scale-110"
+                aria-label="Nextdoor"
+              >
+                <Home className="w-6 h-6" />
+              </a>
             </div>
           </div>
 
@@ -89,7 +98,7 @@ export default function Footer() {
             { 
               icon: Phone, 
               label: '(615) 646-0334', 
-              text: 'Call us 24/7',
+              text: 'Call us',
               href: 'tel:6156460334'
             },
             { 
