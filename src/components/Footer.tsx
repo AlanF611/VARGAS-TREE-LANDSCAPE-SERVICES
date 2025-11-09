@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Leaf, Facebook, Instagram, Twitter, Linkedin, MapPin, Phone, Mail } from 'lucide-react';
+import { TreePine, Facebook, Instagram, Star, MapPin, Phone, Mail } from 'lucide-react';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -11,24 +11,41 @@ export default function Footer() {
           <div className="md:col-span-2">
             <div className="flex items-center space-x-2 mb-6">
               <div className="p-2 bg-gradient-to-br from-green-400 to-emerald-500 rounded-lg">
-                <Leaf className="w-6 h-6 text-white" />
+                <TreePine className="w-6 h-6 text-white" />
               </div>
-              <span className="text-3xl font-black">GreenScape</span>
+              <span className="text-3xl font-black">Vargas Tree</span>
             </div>
             <p className="text-gray-300 mb-6 leading-relaxed max-w-md">
-              Transforming outdoor spaces into breathtaking sanctuaries. We create beautiful, sustainable gardens that enhance your lifestyle and property value.
+              Creating safe, beautiful, and well-maintained outdoor spaces in Nashville. Professional tree care, landscaping, and property maintenance services you can trust.
             </p>
             <div className="flex space-x-4">
-              {[Facebook, Instagram, Twitter, Linkedin].map((Icon, i) => (
-                <a
-                  key={i}
-                  href="#"
-                  className="w-12 h-12 bg-gray-800 hover:bg-gradient-to-br hover:from-green-400 hover:to-emerald-500 rounded-full flex items-center justify-center transition-all transform hover:scale-110"
-                  aria-label="Social media"
-                >
-                  <Icon className="w-6 h-6" />
-                </a>
-              ))}
+              <a
+                href="https://www.instagram.com/vargastreelandscaping?igsh=em5tbXQxYnYwdzdm&utm_source=qr"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-12 h-12 bg-gray-800 hover:bg-gradient-to-r hover:from-pink-500 hover:to-purple-600 rounded-full flex items-center justify-center transition-all transform hover:scale-110"
+                aria-label="Instagram"
+              >
+                <Instagram className="w-6 h-6" />
+              </a>
+              <a
+                href="https://www.facebook.com/p/Vargas-Tree-Landscaping-Services-61574446057446/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-12 h-12 bg-gray-800 hover:bg-blue-600 rounded-full flex items-center justify-center transition-all transform hover:scale-110"
+                aria-label="Facebook"
+              >
+                <Facebook className="w-6 h-6" />
+              </a>
+              <a
+                href="https://m.yelp.com/biz/vargas-tree-landscaping-services-nashville-davidson-metropolitan-government-balance"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-12 h-12 bg-gray-800 hover:bg-red-600 rounded-full flex items-center justify-center transition-all transform hover:scale-110"
+                aria-label="Yelp"
+              >
+                <Star className="w-6 h-6" />
+              </a>
             </div>
           </div>
 
@@ -55,25 +72,46 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="text-lg font-black mb-6 text-green-400">Services</h4>
+            <h4 className="text-lg font-black mb-6 text-green-400">Our Services</h4>
             <ul className="space-y-3 text-gray-300">
-              <li>Landscape Design</li>
-              <li>Hardscape Installation</li>
-              <li>Garden Maintenance</li>
-              <li>Tree Services</li>
-              <li>Irrigation Systems</li>
-              <li>Eco Solutions</li>
+              <li className="hover:text-green-400 transition-colors">Tree Services</li>
+              <li className="hover:text-green-400 transition-colors">Landscape Design</li>
+              <li className="hover:text-green-400 transition-colors">Property Maintenance</li>
+              <li className="hover:text-green-400 transition-colors">Emergency Services</li>
+              <li className="hover:text-green-400 transition-colors">Seasonal Clean-ups</li>
+              <li className="hover:text-green-400 transition-colors">Commercial Landscaping</li>
             </ul>
           </div>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8 mb-12 py-8 border-t-2 border-gray-800">
           {[
-            { icon: Phone, label: '(615) 646-0334', text: 'Call us' },
-            { icon: Mail, label: 'vargastreelandscape@gmail.com', text: 'Email us' },
-            { icon: MapPin, label: '330 Stonecrest Way, Nashville TN 37209', text: 'Visit us' },
+            { 
+              icon: Phone, 
+              label: '(615) 646-0334', 
+              text: 'Call us 24/7',
+              href: 'tel:6156460334'
+            },
+            { 
+              icon: Mail, 
+              label: 'vargastreelandscape@gmail.com', 
+              text: 'Email us',
+              href: 'mailto:vargastreelandscape@gmail.com'
+            },
+            { 
+              icon: MapPin, 
+              label: '330 Stonecrest Way, Nashville TN 37209', 
+              text: 'Visit us',
+              href: 'https://maps.google.com/?q=330+Stonecrest+Way+Nashville+TN+37209'
+            },
           ].map((contact, i) => (
-            <div key={i} className="flex items-center gap-4 group">
+            <a
+              key={i}
+              href={contact.href}
+              target={contact.href.startsWith('http') ? '_blank' : '_self'}
+              rel={contact.href.startsWith('http') ? 'noopener noreferrer' : ''}
+              className="flex items-center gap-4 group hover:bg-gray-800/50 p-4 rounded-lg transition-all"
+            >
               <div className="w-12 h-12 bg-green-600/20 rounded-lg flex items-center justify-center group-hover:bg-green-600 transition-all">
                 <contact.icon className="w-6 h-6 text-green-400 group-hover:text-white transition-colors" />
               </div>
@@ -81,13 +119,13 @@ export default function Footer() {
                 <p className="text-sm text-gray-400">{contact.text}</p>
                 <p className="font-semibold text-white">{contact.label}</p>
               </div>
-            </div>
+            </a>
           ))}
         </div>
 
         <div className="border-t-2 border-gray-800 pt-8 text-center">
           <p className="text-gray-400">
-            &copy; {currentYear} GreenScape. All rights reserved. | Designed with passion for beautiful outdoor spaces
+            &copy; {currentYear} Vargas Tree Landscaping Services. All rights reserved. | Serving Nashville and surrounding areas
           </p>
         </div>
       </div>
